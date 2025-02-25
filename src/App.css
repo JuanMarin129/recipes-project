@@ -1,3 +1,14 @@
 body {
   margin: 0
 }
+
+p {
+  padding: 10px;
+  height: 100%;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  
+}
