@@ -11,6 +11,7 @@ function List() {
         clone.splice(index, 1);
         setListRecipes(clone);
       };
+
   return (
     <>
       {listRecipes.map((eachRecipe, index) => {
@@ -22,6 +23,7 @@ function List() {
         image = {eachRecipe.image}
         index = {index}
         bgColor = {bgColor}
+        id = {eachRecipe.id}
         handleDeleteItemCard = {handleDeleteItemCard}
         />;
       })}

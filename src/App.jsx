@@ -2,7 +2,6 @@ import './App.css'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import Navbar from './components/NavBar'
-import Sidebar from './components/Sidebar'
 import { Route, Routes } from 'react-router-dom'
 import ItemDetails from './pages/ItemDetails'
 import NotFound from './pages/NotFound'
@@ -14,7 +13,7 @@ function App() {
   return (
     <>
     <Navbar />
-    <Sidebar />
+    <div style={{paddingTop:"95px"}}>
     <Routes>
       <Route path = "/" element ={<HomePage />}></Route>
       <Route path = "/recipes/:recipeId" element={<ItemDetails/>}></Route>
@@ -22,6 +21,8 @@ function App() {
 
       <Route path = "*" element={<NotFound/>}></Route>
     </Routes>
+    </div>
+    
     <Footer />
     </>
   )

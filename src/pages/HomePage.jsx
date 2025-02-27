@@ -4,7 +4,7 @@ function HomePage() {
 
     return (
 
-        <div style={{width: "100%"}}>
+        <div style={{width: "100%", backgroundColor:"grey"}}>
             <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
                 <h3>Imagen</h3>
                 <h3>Nombre</h3>

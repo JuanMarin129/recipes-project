@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 function ItemCard(props) {
     
   return (
-    <>
-    <Link to="/recipes/:recipeId">
+    <Link to={`/recipes/${props.id}`}>
       <div
         style={{
           border: "1px solid black",
@@ -28,8 +27,7 @@ function ItemCard(props) {
         <p>{props.servings}</p>
         <button onClick={() => props.handleDeleteItemCard(props.index)}>Delete</button>
       </div>
-      </Link>
-    </>
+    </Link>
   );
 }
 
