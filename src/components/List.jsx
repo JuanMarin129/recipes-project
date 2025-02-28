@@ -1,20 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import ItemCard from "./ItemCard";
-import allRecipes from "../assets/recipes.json";
 
-function List() {
-    const [listRecipes, setListRecipes] = useState(allRecipes);
+function List(props) {
     let bgColor;
 
     const handleDeleteItemCard = (index) => {
-        let clone = listRecipes.slice(0);
+        let clone = props.listRecipes.slice(0);
         clone.splice(index, 1);
-        setListRecipes(clone);
+        props.setListRecipes(clone);
       };
 
   return (
     <>
-      {listRecipes.map((eachRecipe, index) => {
+      {props.listRecipes.map((eachRecipe, index) => {
         eachRecipe.calories <= 300 ? (bgColor = "green") : (bgColor = "orange");
         return <ItemCard 
         name = {eachRecipe.name}

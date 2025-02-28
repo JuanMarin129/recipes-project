@@ -1,6 +1,6 @@
 import List from "../components/List"
 
-function HomePage() {
+function HomePage(props) {
 
     return (
 
@@ -12,7 +12,10 @@ function HomePage() {
                 <h3>Servings</h3>
                 <h3>Delete</h3>
             </div>
-            <List />
+            <List 
+            listRecipes = {props.listRecipes}
+            setListRecipes = {props.setListRecipes}
+            />
         </div>
     )
 }

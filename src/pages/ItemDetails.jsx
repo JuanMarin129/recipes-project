@@ -29,6 +29,7 @@ function ItemDetails() {
     />
     <h1 style={{ textAlign: "center", margin: "5px" }}>{foundRecipe.name}</h1>
     <p>{foundRecipe.description}</p>
+    <Link to="/edit-recipe/:id"><button>Editar</button></Link>
     <Link to="/"><button>Back</button></Link>
     </div>
   )
