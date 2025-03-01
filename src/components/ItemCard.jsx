@@ -1,26 +1,24 @@
 import { Link } from "react-router-dom";
 
 function ItemCard(props) {
+
+  // CSS
+  
+  const itemCardCSS = {
+    border: "1px solid black",
+    display: "flex",
+    flexDirection: "row",
+    textAlign: "center",
+    justifyContent: "space-around",
+    backgroundColor: props.bgColor,
+    paddingRight: "20px",
+  }
     
   return (
     
-      <div
-        style={{
-          border: "1px solid black",
-          display: "flex",
-          flexDirection: "row",
-          textAlign: "center",
-          justifyContent: "space-between",
-          backgroundColor: props.bgColor,
-        }}
-      ><Link to={`/recipes/${props.id}`}>
-        <img
-          src={props.image}
-          alt=""
-          width="200px"
-          height="200px"
-          style={{ textAlign: "center", margin: "5px" }}
-        />
+      <div style={itemCardCSS}>
+        <Link to={`/recipes/${props.id}`}>
+        <img src={props.image} alt="foto-comida" width="150px" height="150px"/>
         </Link>
         <p>{props.name}</p>
         <p>{props.calories}</p>

@@ -13,7 +13,7 @@ function List(props) {
   return (
     <>
       {props.listRecipes.map((eachRecipe, index) => {
-        eachRecipe.calories <= 300 ? (bgColor = "green") : (bgColor = "orange");
+        eachRecipe.calories <= 300 ? (bgColor = "#F9A826" ) : (bgColor = "#FF6B6B");  // #F9A826 Naranja zanahoria | #FF6B6B rojo tomate
         return <ItemCard 
         name = {eachRecipe.name}
         calories = {eachRecipe.calories}

@@ -1,6 +1,28 @@
 import Sidebar from '../components/Sidebar'
 import { useState } from 'react';
 
+
+// CSS
+
+const navBarCSS = {
+    backgroundColor: "#FFF6E5", // #FFF6E5 Blanco cremoso
+    display: "flex", 
+    flexDirection: "row", 
+    justifyContent: "space-between", 
+    alignItems: "center", 
+    position:"fixed", 
+    width:"100vW",
+    padding: "10px 0px"
+}
+/*
+const navBarElementsCSS = {
+    display: "flex", 
+    flexDirection: "row", 
+    alignItems: "center"
+}
+    */
+
+
 function Navbar() {
     const [stateSidebar, setStateSidebar] = useState(false);
 
@@ -16,13 +38,13 @@ function Navbar() {
     };
 
     return (
-        <div style={{backgroundColor: "blue", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", position:"fixed", width:"100vw"}}>
-            <div style={{display: "flex", flexDirection: "row", alignItems: "center"}} >
-                <img width={"30vW"} height={"30vW"} src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/landing-page/menu-icon.png" alt="logo-menu" onClick={() => handleStateSidebar()}/>
-                <h3>Recetas</h3>
+        <div style={navBarCSS}>
+            <div style={{ display: "flex", flexDirection: "row", alignItems: "center", paddingLeft: "30px"}} >
+                <img width={"40vW"} height={"40vW"} src="..\src\images\icono_menu_black_01.png" alt="logo-menu" onClick={() => handleStateSidebar()}/>
+                <h3 style={{paddingLeft: "10px"}}>Recetas</h3>
             </div>
            
-            <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+            <div style={{ display: "flex", flexDirection: "row", alignItems: "center", paddingRight: "30px"}}>
                 <img style={{margin: "0.5%"}} width={"75vW"} src="https://randomuser.me/api/portraits/women/44.jpg" alt="foto" />
                 <h2 style={{width: "15vW", textAlign: "center"}}>Recipes Project</h2>
             </div>

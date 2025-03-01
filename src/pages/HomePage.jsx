@@ -4,8 +4,8 @@ function HomePage(props) {
 
     return (
 
-        <div style={{width: "100%", backgroundColor:"grey"}}>
-            <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
+        <div style={{display: "flex", flexDirection:"column", width: "100vW", backgroundColor:"#53403C", color: "white", textAlign: "center"}}>
+            <div style={{display:"flex", flexDirection:"row", justifyContent:"space-around", padding: "0px 20px"}}>
                 <h3>Imagen</h3>
                 <h3>Nombre</h3>
                 <h3>Calorías</h3>
