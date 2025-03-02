@@ -14,13 +14,8 @@ const navBarCSS = {
     width:"100vW",
     padding: "10px 0px"
 }
-/*
-const navBarElementsCSS = {
-    display: "flex", 
-    flexDirection: "row", 
-    alignItems: "center"
-}
-    */
+
+let cambioScaleY = "";
 
 
 function Navbar() {
@@ -30,8 +25,11 @@ function Navbar() {
         let clone;
         if(stateSidebar === true){
             clone = false;
+            cambioScaleY = "scaleY(0)"; // Lo hacemos invisible
+
         }else if(stateSidebar === false){
             clone = true;
+            cambioScaleY = "scaleY(1)"; // Lo hacemos visible
         }
         console.log(clone)
         setStateSidebar(clone);
@@ -48,9 +46,7 @@ function Navbar() {
                 <img style={{margin: "0.5%"}} width={"75vW"} src="https://randomuser.me/api/portraits/women/44.jpg" alt="foto" />
                 <h2 style={{width: "15vW", textAlign: "center"}}>Recipes Project</h2>
             </div>
-            {stateSidebar ?
-            <Sidebar />
-            : false}
+            <Sidebar cambioScaleY={cambioScaleY} />
         </div>
     )
 }
