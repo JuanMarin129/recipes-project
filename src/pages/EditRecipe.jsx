@@ -34,7 +34,6 @@ function EditRecipe(props) {
     const handleAll = ((event)=>{
         let name = event.target.name;
         let cloneReceta = {...recetaEditada}
-        //console.log(cloneReceta);
         cloneReceta[name] = event.target.value
         console.log("Tras cambiar el valor, cloneReceta es " + cloneReceta);
         setRecetaEditada(cloneReceta)
