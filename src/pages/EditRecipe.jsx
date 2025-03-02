@@ -1,30 +1,51 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { useParams } from "react-router-dom";
+
+
 function EditRecipe(props) {
-    const [recetaEditada, setRecetaEditada] = useState({
-        id: props.listRecipes.id,
-        name: props.listRecipes.name,
-        calories: props.listRecipes.calories,
-        image: props.listRecipes.image, 
-        servings: props.listRecipes.servings,
-        description: props.listRecipes.description
+
+    const parametrosDinamicos = useParams();
+    console.log(parametrosDinamicos.id);
+
+
+    let clone = props.listRecipes.find((cadaReceta) => {
+        if(cadaReceta.id === parametrosDinamicos.id)
+            return true;
+        else
+            return false;
     })
 
-    console.log(props.listRecipes[0])
+     //console.log(clone);
+
+    const [recetaEditada, setRecetaEditada] = useState({
+        id:clone.id,
+        name: clone.name,
+        calories: clone.calories,
+        image: clone.image, 
+        servings: clone.servings,
+        description: clone.description
+    })
+
+    console.log(recetaEditada);
+
+    //console.log(props.listRecipes[0])
 
     const handleAll = ((event)=>{
         let name = event.target.name;
-        let clone = {...recetaEditada}
-        clone[name] = event.target.value
-        setRecetaEditada(clone)
+        let cloneReceta = {...recetaEditada}
+        //console.log(cloneReceta);
+        cloneReceta[name] = event.target.value
+        console.log("Tras cambiar el valor, cloneReceta es " + cloneReceta);
+        setRecetaEditada(cloneReceta)
     })
 
     const handleSubmit = ((event)=>{
         event.preventDefault();
     
-        const clone = [...props.listRecipes]
-        clone.unshift(recetaEditada)
-        props.setListRecipes(clone);
+        const cloneLista = [...props.listRecipes]
+        cloneLista.unshift(recetaEditada)
+        props.setListRecipes(cloneLista);
     
         setRecetaEditada({
             id:"",

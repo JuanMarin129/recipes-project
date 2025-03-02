@@ -2,7 +2,7 @@ import './App.css'
 import React, { useState } from "react";
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
-import Navbar from './components/NavBar'
+import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import ItemDetails from './pages/ItemDetails'
 import NotFound from './pages/NotFound'

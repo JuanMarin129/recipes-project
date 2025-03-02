@@ -15,7 +15,7 @@ const navBarCSS = {
     padding: "10px 0px"
 }
 
-let cambioScaleY = "";
+let cambioScaleY = "scaleY(0)";
 
 
 function Navbar() {

@@ -5,6 +5,8 @@ import allRecipes from "../assets/recipes.json";
 function ItemDetails() {
     /*PARAMETROS DINAMICOS PARA DETAILS*/ 
   const parametrosDinamicos = useParams();
+  //console.log(parametrosDinamicos.recipeId);
+
 
   const foundRecipe = allRecipes.find((cadaReceta) => {
     if (cadaReceta.id === parametrosDinamicos.recipeId) {
@@ -29,7 +31,7 @@ function ItemDetails() {
     />
     <h1 style={{ textAlign: "center", margin: "5px" }}>{foundRecipe.name}</h1>
     <p>{foundRecipe.description}</p>
-    <Link to="/edit-recipe/:id"><button>Editar</button></Link>
+    <Link to={`/edit-recipe/${parametrosDinamicos.recipeId}`}><button>Editar</button></Link>
     <Link to="/"><button>Back</button></Link>
     </div>
   )
