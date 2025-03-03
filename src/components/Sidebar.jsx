@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom"
 
 
-
-
 function Sidebar(props) {
 
     // CSS
@@ -13,8 +11,8 @@ function Sidebar(props) {
         border: "solid", 
         paddingLeft: "15px",
         marginLeft: "15px", 
-        height: "80vH", 
-        width: "10vW", 
+        height: "80vH",
+        minWidth: "30vh", 
         backgroundColor: "#FF6B6B", //   #FF6B6B rojo tomate  
         position:"fixed", 
         top:"99px", 

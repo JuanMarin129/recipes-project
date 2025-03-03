@@ -26,4 +26,69 @@ a:hover {
   color: white;
 }
 
+button {
+  height: 5vw;
+}
 
+#footer{
+  background-color: #FFF6E5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#itemCardCSS {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+  padding-right: 20px;
+}
+
+#navBarCSS {
+  background-color: #FFF6E5;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; 
+  position:fixed;
+  width:100vW;
+  padding: 10px 0px;
+}
+
+#divBtnSidebarCss {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+  }
+
+#divTituloCSS {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    padding-right: 30px;
+}
+
+#aboutDivCSS{
+  display:flex; 
+  flex-direction:column;
+   align-items:center;
+}
+
+#homepageCSS{
+  display: flex;
+  flex-direction:column;
+  width: 100vW;
+  background-color:#53403C;
+   color: white;
+   text-align: center;
+}
+
+#divTitulosMenu{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between; 
+  padding: 0px 20px;
+}

@@ -2,7 +2,7 @@
 function NotFound() {
   return (
     <>
-    <h1>AQUI IRA LA PAGINA DE NOT FOUND</h1>
+    <h1 style={{textAlign:"center"}}>ERROR: 404</h1>
     </>
   )
 }

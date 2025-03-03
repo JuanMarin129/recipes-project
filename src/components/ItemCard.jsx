@@ -2,28 +2,17 @@ import { Link } from "react-router-dom";
 
 function ItemCard(props) {
 
-  // CSS
-  
-  const itemCardCSS = {
-    border: "1px solid black",
-    display: "flex",
-    flexDirection: "row",
-    textAlign: "center",
-    justifyContent: "space-around",
-    backgroundColor: props.bgColor,
-    paddingRight: "20px",
-  }
     
   return (
     
-      <div style={itemCardCSS}>
+      <div id="itemCardCSS" style={{backgroundColor: props.bgColor}}>
         <Link to={`/recipes/${props.id}`}>
-        <img src={props.image} alt="foto-comida" width="150px" height="150px"/>
+        <img src={props.image} alt="foto-comida" width="150px" height="150px" style={{marginTop: "5px"}}/>
         </Link>
         <p>{props.name}</p>
         <p>{props.calories}</p>
         <p>{props.servings}</p>
-        <button onClick={() => props.handleDeleteItemCard(props.index)}>Delete</button>
+        <button id="btnDelete" onClick={() => props.handleDeleteItemCard(props.index)}>Delete</button>
       </div>
     
   );

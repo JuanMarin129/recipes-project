@@ -23,7 +23,9 @@ function App() {
       listRecipes = {listRecipes}
       setListRecipes = {setListRecipes}
       />}></Route>
-      <Route path = "/recipes/:recipeId" element={<ItemDetails/>}></Route>
+      <Route path = "/recipes/:recipeId" element={<ItemDetails
+      listRecipes = {listRecipes}
+      setListRecipes = {setListRecipes}/>}></Route>
       <Route path='/about' element={<About/>}></Route>
       <Route path='/add-recipe' element={<AddRecipe
       listRecipes = {listRecipes}

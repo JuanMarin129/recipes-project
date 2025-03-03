@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 function EditRecipe(props) {
 
     const parametrosDinamicos = useParams();
-    console.log(parametrosDinamicos.id);
+    //console.log(parametrosDinamicos.id);
 
 
     let clone = props.listRecipes.find((cadaReceta) => {
@@ -27,7 +27,7 @@ function EditRecipe(props) {
         description: clone.description
     })
 
-    console.log(recetaEditada);
+    //console.log(recetaEditada);
 
     //console.log(props.listRecipes[0])
 
@@ -35,25 +35,28 @@ function EditRecipe(props) {
         let name = event.target.name;
         let cloneReceta = {...recetaEditada}
         cloneReceta[name] = event.target.value
-        console.log("Tras cambiar el valor, cloneReceta es " + cloneReceta);
+        //console.log("Tras cambiar el valor, cloneReceta es " + cloneReceta);
         setRecetaEditada(cloneReceta)
     })
 
     const handleSubmit = ((event)=>{
         event.preventDefault();
     
-        const cloneLista = [...props.listRecipes]
-        cloneLista.unshift(recetaEditada)
+        const cloneLista = JSON.parse(JSON.stringify(props.listRecipes));
+
+        cloneLista.forEach((cadaReceta) => {
+            if(cadaReceta.id === parametrosDinamicos.id){
+                cadaReceta.name = recetaEditada.name;
+                cadaReceta.calories = recetaEditada.calories;
+                cadaReceta.image = recetaEditada.image;
+                cadaReceta.servings = recetaEditada.servings;
+                cadaReceta.description = recetaEditada.description;
+            }
+        })
+
+        //cloneLista.unshift(recetaEditada)
         props.setListRecipes(cloneLista);
     
-        setRecetaEditada({
-            id:"",
-            name: "",
-            calories: 0,
-            image: "", 
-            servings: 1,
-            description: ""
-        })
       })
   return (
     <div >
@@ -63,7 +66,7 @@ function EditRecipe(props) {
         <span>Edit Recipe</span>
         <label>
             Id
-            <input value = {recetaEditada.id} name="id" type="text" placeholder="Id" onChange={handleAll}/>
+            <input name="id" type="text" placeholder={recetaEditada.id} readOnly/>
         </label>
         <label>
             Full Name
@@ -86,7 +89,7 @@ function EditRecipe(props) {
             <input value = {recetaEditada.description} name="description" type="textarea" placeholder="Description" rows = "10" cols = "100" onChange={handleAll}/>
           </label>
 
-          <button type="submit">Edit Recipe</button>
+          <button type="submit">Change</button>
           <Link to="/"><button>Home</button></Link>
         </div>
     </form>
