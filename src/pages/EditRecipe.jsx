@@ -62,35 +62,37 @@ function EditRecipe(props) {
     <div >
     <form onSubmit={handleSubmit} >
         
-        <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-        <span>Edit Recipe</span>
+        <div className="formCSS">
+        <span className="tituloForm">Edit Recipe</span>
         <label>
-            Id
+            Id:&nbsp;
             <input name="id" type="text" placeholder={recetaEditada.id} readOnly/>
         </label>
         <label>
-            Full Name
+            Full Name:&nbsp;
             <input value = {recetaEditada.name} name="name" type="text" placeholder="Name" onChange={handleAll}/>
         </label>
         <label>
-            Calories
+            Calories:&nbsp;
             <input value = {recetaEditada.calories} name="calories" type="number" min={0} placeholder="Calories" onChange={handleAll}/>
         </label>
         <label>
-            Image
+            Image:&nbsp;
             <input value = {recetaEditada.image} name="image" type="url" placeholder="Image" onChange={handleAll}/>
         </label>
         <label>
-            Servings
+            Servings:&nbsp;
             <input value = {recetaEditada.servings} name="servings" type="number" min={1} placeholder="Servings" onChange={handleAll}/>
         </label>
         <label>
-            Description
-            <input value = {recetaEditada.description} name="description" type="textarea" placeholder="Description" rows = "10" cols = "100" onChange={handleAll}/>
+            Description:&nbsp;
+            <input className="textArea" value = {recetaEditada.description} name="description" type="textarea" placeholder="Description" onChange={handleAll}/>
           </label>
 
-          <button type="submit">Change</button>
-          <Link to="/"><button>Home</button></Link>
+        <div className="btnsForms">
+        <button type="submit">Change</button>
+        <Link to="/"><button>Home</button></Link>
+        </div>
         </div>
     </form>
     

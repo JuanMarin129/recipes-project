@@ -11,7 +11,7 @@ function List(props) {
       };
 
   return (
-    <>
+    <div id="contenedorLista">
       {props.listRecipes.map((eachRecipe, index) => {
         eachRecipe.calories <= 300 ? (bgColor = "#F9A826" ) : (bgColor = "#FF6B6B");  // #F9A826 Naranja zanahoria | #FF6B6B rojo tomate
         return <ItemCard 
@@ -25,7 +25,7 @@ function List(props) {
         handleDeleteItemCard = {handleDeleteItemCard}
         />;
       })}
-    </>
+    </div>
   );
 }
 

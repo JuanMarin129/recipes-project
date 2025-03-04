@@ -24,9 +24,9 @@ function Navbar() {
 
     return (
         <div id="navBarCSS">
-            <div id="divBtnSidebarCss" >
-                <img width={"40vW"} height={"40vW"} src="..\src\images\icono_menu.png" alt="logo-menu" onClick={() => handleStateSidebar()}/>
-                <h3 style={{paddingLeft: "10px"}}>Recetas</h3>
+            <div id="divBtnSidebarCss"  onClick={() => handleStateSidebar()}>
+                <img width={"40vW"} height={"40vW"} src="..\src\images\icono_menu.png" alt="logo-menu"/>
+                <h3 style={{paddingLeft: "10px"}}>Menú</h3>
             </div>
            
             <div id="divTituloCSS">

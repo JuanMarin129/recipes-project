@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #A8D5BA;
 }
 
 p {
@@ -22,12 +23,21 @@ a:link {
 }
 
 a:hover {
-  background-color: #FF9C00;
   color: white;
 }
 
 button {
-  height: 5vw;
+  height: 40px;
+  background-color: #53403C;
+  border-color: #53403C;
+  border-radius: 10px;
+  color: #FFF6E5;
+  font-weight: bolder;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px black;
 }
 
 #footer{
@@ -35,6 +45,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 35px;
+  bottom: 0;
 }
 
 #itemCardCSS {
@@ -42,6 +56,7 @@ button {
   display: flex;
   flex-direction: row;
   text-align: center;
+  align-items: center;
   justify-content: space-around;
   padding-right: 20px;
 }
@@ -62,6 +77,18 @@ button {
   flex-direction: row;
   align-items: center;
   padding-left: 30px;
+  }
+
+#divBtnSidebarCss:hover {
+  cursor: pointer;
+  }
+
+.menuOption{
+color: white;
+}
+
+.menuOption:hover{
+  color: #A8D5BA;
   }
 
 #divTituloCSS {
@@ -87,8 +114,156 @@ button {
 }
 
 #divTitulosMenu{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0px 5px 0px;
+}
+
+.formCSS{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 900px;
+  margin-bottom: 35px;
+}
+
+.formCSS label{
+  height: 50px;
+  background-color: #53403C;
+  border-color: #53403C;
+  border-radius: 10px;
+  color: #FFF6E5;
+  font-weight: bolder;
+  padding-left: 5px;
+  
+}
+
+.formCSS label input{
+  height: 44px;
+}
+
+.tituloForm{
+  background-color: #FF6B6B;
+  border-color: #53403C;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: bolder;
+  padding: 1.2%;
+}
+
+#detallesReceta{
+  margin-top: 30px;
   display:flex;
-  flex-direction:row;
-  justify-content:space-between; 
-  padding: 0px 20px;
+  flex-direction:column;
+  align-items:center;
+}
+
+#detallesReceta p{
+  width: 50vw;
+}
+
+#btnsDetails{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#btnsDetails button{
+  margin-right: 20px;
+}
+
+#contenedorLista{
+margin-bottom: 35px;
+}
+
+.btnsForms{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btnsForms button{
+  margin-right: 20px;
+}
+
+#contenedorEstudiantes{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+#aboutDivCSS {
+  margin-bottom: 40px;
+}
+
+#aboutDivCSS h1{
+color: #FF6B6B;
+text-decoration: underline;
+}
+
+.datosEstudiante{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.enlacesEstudiante{
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.descripcionEstudiante{
+  width: 300px;
+  text-align: left;
+}
+
+.linkedin{
+  background-color: blue;
+  border: 2px solid #000;
+  border-color: blue;
+  border-radius: 10px;
+  color: #FFF6E5;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.linkedin:hover{
+  border-color: black;
+  box-shadow: 2px 2px black;
+}
+
+.github{
+  background-color: grey;
+  border: 2px solid #000;
+  border-color: grey;
+  border-radius: 10px;
+  color: #FFF6E5;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.github:hover{
+  border-color: black;
+  box-shadow: 2px 2px black;
+}
+
+.descripcionProyecto{
+  width: 90vw;
+  font-size: larger;
+  text-align: left;
 }

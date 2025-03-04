@@ -7,7 +7,7 @@ function ItemCard(props) {
     
       <div id="itemCardCSS" style={{backgroundColor: props.bgColor}}>
         <Link to={`/recipes/${props.id}`}>
-        <img src={props.image} alt="foto-comida" width="150px" height="150px" style={{marginTop: "5px"}}/>
+        <img src={props.image} alt="foto-comida" width="120px" height="120px" style={{marginTop: "5px"}}/>
         </Link>
         <p>{props.name}</p>
         <p>{props.calories}</p>

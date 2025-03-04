@@ -39,35 +39,38 @@ function AddRecipe(props) {
     <div >
     <form onSubmit={handleSubmit} >
         
-        <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-        <span>Add Recipe</span>
+        <div className="formCSS">
+        <span className="tituloForm">Add Recipe</span>
         <label>
-            Id
+            Id:&nbsp;
             <input value = {nuevaReceta.id} name="id" type="text" placeholder="Id" onChange={handleAll}/>
         </label>
         <label>
-            Full Name
+            Full Name:&nbsp;
             <input value = {nuevaReceta.name} name="name" type="text" placeholder="Name" onChange={handleAll}/>
         </label>
         <label>
-            Calories
+            Calories:&nbsp;
             <input value = {nuevaReceta.calories} name="calories" type="number" min={0} placeholder="Calories" onChange={handleAll}/>
         </label>
         <label>
-            Image
+            Image:&nbsp;
             <input value = {nuevaReceta.image} name="image" type="url" placeholder="Image" onChange={handleAll}/>
         </label>
         <label>
-            Servings
+            Servings:
             <input value = {nuevaReceta.servings} name="servings" type="number" min={1} placeholder="Servings" onChange={handleAll}/>
         </label>
         <label>
-            Description
-            <input value = {nuevaReceta.description} name="description" type="textarea" placeholder="Description" rows = "10" cols = "100" onChange={handleAll}/>
+            Description:&nbsp;
+            <input className="textArea" value = {nuevaReceta.description} name="description" type="textarea" placeholder="Description" onChange={handleAll}/>
           </label>
 
-          <button type="submit">Add Recipe</button>
-          <Link to="/"><button>Back</button></Link>
+        <div className="btnsForms">
+            <button type="submit">Add Recipe</button>
+            <Link to="/"><button>Back</button></Link>
+        </div>
+          
         </div>
     </form>
     

@@ -21,18 +21,21 @@ function ItemDetails(props) {
 
 
   return (
-    <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+    <div id="detallesReceta">
     <img
         src={foundRecipe.image}
         alt=""
-        width="200px"
-        height="200px"
+        width="300px"
+        height="300px"
         style={{ textAlign: "center", margin: "5px" }}
     />
     <h1 style={{ textAlign: "center", margin: "5px" }}>{foundRecipe.name}</h1>
     <p>{foundRecipe.description}</p>
+    <div id="btnsDetails">
     <Link to={`/edit-recipe/${parametrosDinamicos.recipeId}`}><button>Editar</button></Link>
     <Link to="/"><button>Back</button></Link>
+    </div>
+    
     </div>
   )
 }
