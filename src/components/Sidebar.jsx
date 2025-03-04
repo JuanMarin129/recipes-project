@@ -11,7 +11,7 @@ function Sidebar(props) {
         border: "solid", 
         paddingLeft: "15px",
         marginLeft: "15px", 
-        height: "20vH",
+        minHeight: "20vh",
         minWidth: "30vh", 
         backgroundColor: "#FF6B6B", //   #FF6B6B rojo tomate  
         position:"fixed", 
