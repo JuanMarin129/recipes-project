@@ -107,7 +107,6 @@ color: white;
 #homepageCSS{
   display: flex;
   flex-direction:column;
-  width: 100vW;
   background-color:#53403C;
    color: white;
    text-align: center;
@@ -199,7 +198,7 @@ margin-bottom: 35px;
 #contenedorEstudiantes{
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 98vw;
   justify-content: space-around;
 }
 
@@ -263,7 +262,8 @@ text-decoration: underline;
 }
 
 .descripcionProyecto{
-  width: 90vw;
+  width: 80vw;
   font-size: larger;
-  text-align: left;
+  text-align: center;
+  align-items: center;
 }
