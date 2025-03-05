@@ -86,7 +86,7 @@ function EditRecipe(props) {
         </label>
         <label>
             Description:&nbsp;
-            <input className="textArea" value = {recetaEditada.description} name="description" type="textarea" placeholder="Description" onChange={handleAll}/>
+            <textarea className="textArea" value = {recetaEditada.description} cols="50" rows="5" name="description"  placeholder="Description" onChange={handleAll}/>
           </label>
 
         <div className="btnsForms">

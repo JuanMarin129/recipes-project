@@ -16,6 +16,7 @@ function App() {
 
   return (
     <>
+    {/*Feedback al añadir o editar el usuario; Ajustar los TextArea de los formularios*/}
     <Navbar />
     <div style={{paddingTop:"95px"}}>
     <Routes>
